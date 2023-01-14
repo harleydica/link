@@ -6,6 +6,7 @@
 
 - **Next.js**
 - **React**
+  - icons/si
 - **Tailwind CSS**
 - **Vercel**
   - Deployment
