@@ -10,6 +10,7 @@
 - **Vercel**
   - Deployment
   - Edge Config
+- **Umami Analytics**
 
 ## Commiting
 
