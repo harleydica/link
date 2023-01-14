@@ -1,10 +1,12 @@
 import Image from 'next/image';
 import { get } from '@vercel/edge-config';
 import { redirect } from 'next/navigation';
-import { 
+import {
+  SiMaildotru,
   SiTwitter, 
   SiGithub, 
   SiInstagram, 
+  SiWhatsapp,
   SiYoutube, 
   SiLinkedin 
 } from 'react-icons/si';
@@ -70,22 +72,23 @@ export default async function HomePage() {
   const data: Data | undefined = await get('link');
 
   if (!data) {
-    // not working yet https://github.com/vercel/next.js/issues/44232
     redirect('https://taufikcrisnawan.dev');
   }
 
   return (
     <div className="flex items-center flex-col mx-auto w-full justify-center mt-16 px-8">
-      <Image
+      <a href="https://ik.imagekit.io/taufik/profile/Taufik-Crisnawan-Santosa.jpg" target="_blank">
+        <Image
         priority
         className="rounded-full hover:scale-110 transition-all"
         alt={data.name}
         src={data.avatar}
-        width={96}
-        height={96}
-        objectFit='contain'
-      />
-      <h1 className="font-bold mt-4 text-xl text-white">{data.name}</h1>
+        width={100}
+        height={100}
+        href="https://ik.imagekit.io/taufik/profile/Taufik-Crisnawan-Santosa.jpg"
+        target="_blank"
+      /></a>
+      <h1 className="font-bold mt-2 text-2xl text-white">{data.name}</h1>
       <p className="mt-1 mb-8 text-white">A Student & Tech Enthusiast</p>
       {data.links.map((link) => (
         <LinkCard key={link.href} {...link} />
@@ -99,12 +102,16 @@ export default async function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            {social.href.includes('twitter') ? (
-              <SiTwitter size='30px' className='hover:scale-110 transition-all'/>
+            {social.href.includes('mailto') ? (
+              <SiMaildotru size='26px' className='hover:scale-110 transition-all'/>
+            ) : social.href.includes('twitter') ? (
+                <SiTwitter size='30px' className='hover:scale-110 transition-all'/>
             ) : social.href.includes('youtube') ? (
               <SiYoutube size='30px' className='hover:scale-110 transition-all'/>
             ) : social.href.includes('instagram') ? (
               <SiInstagram size='26px' className='hover:scale-110 transition-all'/>
+            ) : social.href.includes('wa') ? (
+                <SiWhatsapp size='26px' className='hover:scale-110 transition-all'/>
             ) : social.href.includes('github') ? (
               <SiGithub size='26px' className='hover:scale-110 transition-all'/>
             ) : social.href.includes('linkedin') ? (
