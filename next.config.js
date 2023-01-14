@@ -4,7 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['pbs.twimg.com'],
+    domains: ['ik.imagekit.io'],
   },
 };
 
