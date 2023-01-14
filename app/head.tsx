@@ -3,7 +3,7 @@ export default function Head() {
     <>
       <title>Links — Taufik Crisnawan Santosa</title>
       <meta name="description" content="Linktree + Next.js + Tailwind CSS" />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/favicon.svg" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </>
   );
