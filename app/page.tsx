@@ -85,8 +85,6 @@ export default async function HomePage() {
         src={data.avatar}
         width={100}
         height={100}
-        href="https://ik.imagekit.io/taufik/profile/Taufik-Crisnawan-Santosa.jpg"
-        target="_blank"
       /></a>
       <h1 className="font-bold mt-2 text-2xl text-white">{data.name}</h1>
       <p className="mt-1 mb-8 text-white">A Student & Tech Enthusiast</p>
