@@ -108,7 +108,12 @@ interface Social {
 }
 
 export default async function HomePage() {
-  const data: Data | undefined = await get('linktree');
+  const data: Data | undefined = await get('link');
+
+  if (!data) {
+    // not working yet https://github.com/vercel/next.js/issues/44232
+    redirect('https://linktr.ee/selenagomez');
+  }
 
   return (
     <div className="flex items-center flex-col mx-auto w-full justify-center mt-16 px-8">
