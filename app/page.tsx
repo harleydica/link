@@ -87,7 +87,7 @@ export default async function HomePage() {
         height={100}
       /></a>
       <h1 className="font-bold mt-2 text-2xl text-white">{data.name}</h1>
-      <p className="mt-1 mb-8 text-white">A Student & Tech Enthusiast</p>
+      <p className="mt-1 mb-8 text-white">NOC Engineer & Tech Enthusiast</p>
       {data.links.map((link) => (
         <LinkCard key={link.href} {...link} />
       ))}
