@@ -77,7 +77,7 @@ export default async function HomePage() {
 
   return (
     <div className="flex items-center flex-col mx-auto w-full justify-center mt-16 px-8">
-      <a href="https://ik.imagekit.io/taufik/profile/Taufik-Crisnawan-Santosa.jpg" target="_blank">
+      <a href="https://ik.imagekit.io/taufik/profile/Taufik-Crisnawan-Santoso.jpg" target="_blank">
         <Image
         priority
         className="rounded-full hover:scale-110 transition-all"
